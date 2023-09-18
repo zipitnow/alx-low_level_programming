@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strcat - function is used to concatenate (append) one string to
@@ -11,7 +10,7 @@
  * Return: dest as result
  */
 
-char *_strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
 	char *dest_ptr = dest;
 
