@@ -1,6 +1,6 @@
 0x09. C - Static libraries
 C
-
+     updated
     By: Julien Barbier
     Weight: 1
     Project over - took place from Sep 1, 2023 6:00 AM to Sep 2, 2023 6:00 AM
