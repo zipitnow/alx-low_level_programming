@@ -13,6 +13,9 @@ char *_strdup(char *str)
 	int len_str = 0;
 	char *dup_str;
 
+	if (str == NULL)
+		return (NULL);
+
 	while (str[len_str] != '\0')
 	{
 		len_str++;
@@ -27,5 +30,6 @@ char *_strdup(char *str)
 		i++;
 	}
 	dup_str[i] = '\0';
+
 	return (dup_str);
 }
