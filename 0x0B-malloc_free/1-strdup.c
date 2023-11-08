@@ -18,10 +18,6 @@ char *_strdup(char *str)
 		len_str++;
 	}
 	dup_str = malloc((len_str * sizeof(char)) + 1);
-
-	if (str == NULL)
-		return (NULL);
-
 	if (dup_str == NULL)
 		return (NULL);
 
