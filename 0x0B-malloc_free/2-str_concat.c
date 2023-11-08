@@ -5,10 +5,8 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int j = 0;
 	int count = 0;
-	char *str1,*str2; 
-	
-	str1 = malloc(sizeof(*s1)+ 1);
-	str2 = malloc(sizeof(*s2) + 1);
+	char *str1 = malloc(sizeof(*s1)+ 1);
+	char* str2 = malloc(sizeof(*s2) + 1);
 
 	if (s1 == NULL)
 		return (" ");
@@ -32,19 +30,7 @@ char *str_concat(char *s1, char *s2)
 		s1++;
 	}
 	
-	while (*str2)
-	{
-		
-		j--;
-		count--;
-
-	}
-
-	while (*str1)
-	{
-		i--;
-		count--;
-	}
+	char *tot_str =
 
 	return  str1;
 
