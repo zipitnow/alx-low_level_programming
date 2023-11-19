@@ -21,7 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		str_len++;
 	str = (char *)malloc((sizeof(char) * str_len) + 1);
 	if (str == NULL)
-		exit(0)
+		exit(0);
 	while (separator[j] != '\0')
 	{
 		str[j] = separator[j];
