@@ -15,8 +15,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list num_args;
 
 	va_start(num_args, n);
-	if (separator == NULL)
-		exit(0);
 	while (separator[str_len] != '\0')
 		str_len++;
 	str = (char *)malloc((sizeof(char) * str_len) + 1);
@@ -32,7 +30,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", va_arg(num_args, int));
 		if (i < n - 1)
 		{
-			printf("%s", str);
+			if (separator == NULL)
+				exit(0);
+			else
+				printf("%s", str);
 		}
 	}
 	free(str);
