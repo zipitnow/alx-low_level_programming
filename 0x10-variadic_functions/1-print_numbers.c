@@ -3,13 +3,11 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
         int str_len = 0;
-        int i;
+        unsigned int i;
 	int j;
         char *str;
         va_list num_args;
         va_start(num_args, n);
-
-        double print_num = va_arg(num_args, double);
 
 	if (separator == NULL)
 		exit(0);
@@ -21,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	j = 0;
 
-	while (separator[j] < '\0')
+	while (separator[j] !=  '\0')
 	{
 		str[j] = separator[j];
 		j++;
@@ -29,8 +27,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
         for (i = 0;i < n; i++)
         {
-                printf("%f", va_arg(num_args[i],double));
-                if (i < str_len)
+                printf("%d", va_arg(num_args,int));
+                if (i < n - 1)
                 {
 			printf("%s", str);
                  
