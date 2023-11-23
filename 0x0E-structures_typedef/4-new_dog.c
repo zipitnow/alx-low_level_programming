@@ -1,5 +1,11 @@
 #include "dog.h"
-
+/**
+ * new_dog - a function that creates a new dog
+ * @name: string varaiable
+ * @age: float variable
+ * @owner: string variable
+ * Return: a pointer to the new dog or null whan fails
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i, j, name_len, own_len;
@@ -7,6 +13,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	name_len = 0;
 	own_len = 0;
+	if (name == NULL || owner == NULL)
+		return (NULL);
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 	{
@@ -21,12 +29,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog->name == NULL)
 	{
 		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
 	dog->owner = malloc((sizeof(char) * own_len) + 1);
 	if (dog->owner == NULL)
 	{
 		free(dog->owner);
+		free(dog);
 		return (NULL);
 	}
 	for (i = 0; i < name_len; i++)
@@ -37,7 +47,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->owner[j] = '\0';
 	dog->name = name;
 	dog->age = age;
-
 	return (dog);
-
 }
