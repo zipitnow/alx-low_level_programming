@@ -41,7 +41,8 @@ char *_strstr(char *haystack, char *needle)
 			else if (j == len2 - 1)
 				return (&haystack[i]);
 		}
-
+		if (i == len1 - 1)
+			return (haystack);
 	}
 	return (NULL);
 }
