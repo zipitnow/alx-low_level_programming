@@ -2,7 +2,7 @@
 
 /**
  * _strchr - function that locates a character
- * in a strin
+ * in a string
  * @s: a pointer to the first occurance
  * of a character
  * @c: a character to be pointed at
@@ -11,13 +11,14 @@
 
 char *_strchr(char *s, char c)
 {
+
 	if (s == NULL)
-		return ("nil");
+		return (NULL);
 	while (*s != '\0')
 	{
 		if (*s == c)
 			return (s);
 		s++;
 	}
-	return (s);
+	return (NULL);
 }
