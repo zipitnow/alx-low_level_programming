@@ -26,11 +26,11 @@ char *_strstr(char *haystack, char *needle)
 {
 	int len1, len2, i, j;
 
-	if (needle == NULL)
-		return (haystack);
-
 	len1 = _strlen(haystack);
 	len2 = _strlen(needle);
+
+	if (*needle == '\0')
+		return (haystack);
 
 	for (i = 0; i < len1; i++)
 	{
