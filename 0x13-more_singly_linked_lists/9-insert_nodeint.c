@@ -9,13 +9,14 @@
  * Return: address of the new node or NULL
  */
 
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n){
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+{
 	unsigned int count = 0;
 	listint_t *current_node = malloc(sizeof(listint_t));
 	listint_t *next_pointer = *head;
 
 	if (current_node == NULL)
-		return NULL;
+		return (NULL);
 	current_node->n = n;
 
 	while (idx == 0)
