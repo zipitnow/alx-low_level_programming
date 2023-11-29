@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n){
 		return NULL;
 	current_node->n = n;
 
-	if (idx == 0)
+	while (idx == 0)
 	{
 		current_node = next_pointer->next;
 		*head = current_node->next;
