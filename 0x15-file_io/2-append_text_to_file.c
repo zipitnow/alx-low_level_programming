@@ -41,7 +41,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	else
 	{
 		close(new_file);
-		return (-1);
+		return (1);
 	}
 	close(new_file);
 	return (1);
